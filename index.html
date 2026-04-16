@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Волшебная Сказка для Сестры</title>
+    <script type="module" crossorigin src="./assets/index-I7BD6Fc4.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-D5oMbRBH.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <audio id="bgMusic" loop autoplay muted>
+      <source src="./DJ Snake feat. Justin Bieber - let melove you.mp3" type="audio/mpeg">
+    </audio>
+  </body>
+  <script>
+    const audio = document.getElementById('bgMusic');
+            audio.volume = 0.3;
+
+            // Размьютим после первого касания/клика
+            document.body.addEventListener('touchstart', () => {
+              audio.muted = false;
+              audio.play().catch(e => console.log(e));
+            }, { once: true });
+        
+            document.body.addEventListener('click', () => {
+              audio.muted = false;
+              audio.play().catch(e => console.log(e));
+            }, { once: true });
+  </script>
+</html>
